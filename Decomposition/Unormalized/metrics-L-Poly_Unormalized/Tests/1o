@@ -1,0 +1,2 @@
+/home/joel/.local/lib/python3.8/site-packages/scipy/stats/_morestats.py:1758: UserWarning: Input data for shapiro has range zero. The results may not be accurate.
+  warnings.warn("Input data for shapiro has range zero. The results "
