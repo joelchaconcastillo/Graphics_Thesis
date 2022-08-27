@@ -14,15 +14,10 @@ set autoscale xfix
 set style fill solid 0.25 border -1
 set style boxplot nooutliers pointtype 7
 set style data boxplot
-set boxwidth 0.03
+set boxwidth 0.055
 
 stats "MOEAD_2" using 2 nooutput
 
-#plot for [i=0:STATS_blocks-2] "AVSDMOEAD_2" using (-0.02+0.2*i):2 index i lt 1 lc rgb 'green' title "",\
-#for [i=STATS_blocks-1:STATS_blocks-1] "AVSDMOEAD_2" using (-0.02+0.2*i):2 index i lt 1 lc rgb 'green' title "AVSD-MOEA/D",\
-#for [i=0:STATS_blocks-2] "MOEAD_2" using (0.02+0.2*i):2 index i lt 1 lc rgb 'blue' title "",\
-#for [i=STATS_blocks-1:STATS_blocks-1] "MOEAD_2" using (0.02+0.2*i):2 index i lt 1 lc rgb 'blue' title "MOEA/D"
-#
-plot for [i=0:STATS_blocks-1] "AVSDMOEAD_2" using (-0.02+0.2*i):2 index i lt 1 lc rgb 'white'title (i==0 ? 'AVSD-MOEA/D' : ''),\
-     for [i=0:STATS_blocks-1] "MOEAD_2" using (0.02+0.2*i):2 index i lt 1 lc rgb 'green' title (i==0 ? 'MOEA/D' : '') ,\
-     for [i=0:STATS_blocks-1] "MOEAD_2" using (0.2*i+0.02):(-1):xticlabel(1) index i w l notitle
+plot for [i=0:STATS_blocks-1] "AVSDMOEAD_2" using (-0.025+0.2*i):2 index i lt 1 lc rgb 'white'title (i==0 ? 'AVSD-MOEA/D' : ''),\
+     for [i=0:STATS_blocks-1] "MOEAD_2" using (0.025+0.2*i):2 index i lt 1 lc rgb 'green' title (i==0 ? 'MOEA/D-DE' : '') ,\
+     for [i=0:STATS_blocks-1] "MOEAD_2" using (0.2*i):(-1):xticlabel(1) index i w l notitle
