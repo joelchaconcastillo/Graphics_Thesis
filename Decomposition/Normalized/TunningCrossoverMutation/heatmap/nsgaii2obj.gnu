@@ -5,7 +5,7 @@ set terminal postscript enhanced font "Helvetica" 28
 set output "nsgaii2obj.eps" 
 set ylabel ""
 set xlabel ""
-unset colorbox
+#unset colorbox
 set title "Problems with two objectives"
 
 set ytics ("CR=0.00" 0,"CR=0.25" 1,"CR=0.50" 2, "CR=0.75" 3, "CR=1.00" 4)

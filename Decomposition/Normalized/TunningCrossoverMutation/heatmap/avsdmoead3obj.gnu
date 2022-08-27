@@ -5,7 +5,7 @@ set terminal postscript enhanced font "Helvetica" 28
 set output "avsdmoead3obj.eps" 
 set ylabel ""
 set xlabel ""
-unset colorbox
+#unset colorbox
 set title "Problems with three objectives"
 set ytics ("CR=0.00" 0,"CR=0.25" 1,"CR=0.50" 2, "CR=0.75" 3, "CR=1.00" 4)
 set xtics ("F=0.25" 0,"F=0.50" 1,"F=0.75" 2, "F=1.00" 3)
